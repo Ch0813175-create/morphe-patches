@@ -1,0 +1,55 @@
+name: Build manual Morphe release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: "Release tag to create (for example, manual-v1.0.0). Use a new tag each run."
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build and publish Morphe patch bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Java
+        uses: actions/setup-java@v6.0.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Build patch bundle
+        run: ./gradlew :patches:buildAndroid --no-daemon
+
+      - name: Verify bundle exists
+        shell: bash
+        run: |
+          shopt -s nullglob
+          bundles=(patches/build/libs/patches-*.mpp)
+          if (( ${#bundles[@]} == 0 )); then
+            echo "::error::Gradle did not produce patches/build/libs/patches-*.mpp"
+            exit 1
+          fi
+          printf 'Will publish: %s\n' "${bundles[@]}"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag_name }}
+          name: Morphe patches ${{ inputs.tag_name }}
+          body: |
+            Manually built Morphe patch bundle for direct import into Morphe Manager.
+
+            Download the `.mpp` asset below and import it in Morphe Manager.
+          files: patches/build/libs/patches-*.mpp
+          fail_on_unmatched_files: true
+          generate_release_notes: true
