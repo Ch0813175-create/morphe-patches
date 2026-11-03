@@ -14,7 +14,7 @@ Select the app you want to patch inside Morphe Manager, follow all instructions 
 ## Patches
 
 <!-- PATCHES_START -->
-> **[v2.8.5](https://github.com/bearinmindcat/morphe-patches/releases/tag/v2.8.5)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;123 patches total
+> **[v1.0.0](https://github.com/Ch0813175-create/morphe-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;124 patches total
 <details>
 <summary><img src="docs/icons/pin-google.png" width="20" height="20" align="top"> Google Maps&nbsp;&nbsp;-&gt;&nbsp;&nbsp;<img src="docs/icons/pin-ungoogled.png" width="20" height="20" align="top"> Ungoogled Maps&nbsp;&nbsp;•&nbsp;&nbsp;30 patches</summary>
 <br>
@@ -130,18 +130,19 @@ Select the app you want to patch inside Morphe Manager, follow all instructions 
 </details>
 
 <details>
-<summary>📱 Samsung Apps&nbsp;&nbsp;•&nbsp;&nbsp;18 apps&nbsp;&nbsp;•&nbsp;&nbsp;28 patches</summary>
+<summary>📱 Samsung Apps&nbsp;&nbsp;•&nbsp;&nbsp;18 apps&nbsp;&nbsp;•&nbsp;&nbsp;29 patches</summary>
 <br>
 <blockquote>
 
 <details>
-<summary><img src="docs/icons/samsung-calculator.png" width="20" height="20" align="top"> Samsung Calculator&nbsp;&nbsp;-&gt;&nbsp;&nbsp;<img src="docs/icons/samsung-calculator.png" width="20" height="20" align="top"> Samsung Calculator&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<summary><img src="docs/icons/samsung-calculator.png" width="20" height="20" align="top"> Samsung Calculator&nbsp;&nbsp;-&gt;&nbsp;&nbsp;<img src="docs/icons/samsung-calculator.png" width="20" height="20" align="top"> Samsung Calculator&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>
 
 **Supported version(s):** 12.4.00.13
 
 | Patch | Description | Options |
 |----------|----------------|-----------|
+| [Custom colors](#custom-colors) | Choose custom main, background, button and text colors for Samsung Calculator (hex colors). | • Main / accent colour<br>• Background colour<br>• Button colour<br>• Text colour |
 | [Enable non-One UI ROM support](#enable-non-one-ui-rom-support) | Makes Samsung Calculator usable on non-One UI ROMs. |  |
 
 </details>

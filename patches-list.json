@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "2.8.5",
+  "version": "1.0.0",
   "patches": [
     {
       "name": "120 refresh rate",
@@ -983,6 +983,70 @@
           "required": true,
           "type": "kotlin.String",
           "default": "org.ungoogled.honeyboard",
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Custom colors",
+      "description": "Choose custom main, background, button and text colors for Samsung Calculator (hex colors).",
+      "default": false,
+      "category": null,
+      "dependencies": [],
+      "compatiblePackages": [
+        {
+          "packageName": "com.sec.android.app.popupcalculator",
+          "name": "Samsung Calculator",
+          "description": null,
+          "apkFileType": "APK",
+          "appIconColor": "#3E91FF",
+          "signatures": null,
+          "targets": [
+            {
+              "version": "12.4.00.13",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "main",
+          "title": "Main / accent colour",
+          "description": "Primary accents, highlights and themed controls. Enter #RRGGBB or #AARRGGBB.",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "#3E91FF",
+          "values": null
+        },
+        {
+          "key": "background",
+          "title": "Background colour",
+          "description": "Calculator screens, panels and surfaces. Enter #RRGGBB or #AARRGGBB.",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "#FFFFFF",
+          "values": null
+        },
+        {
+          "key": "buttons",
+          "title": "Button colour",
+          "description": "Calculator keys, operators and action buttons. Enter #RRGGBB or #AARRGGBB.",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "#F1F3F4",
+          "values": null
+        },
+        {
+          "key": "text",
+          "title": "Text colour",
+          "description": "Display, labels, digits and icons. Enter #RRGGBB or #AARRGGBB.",
+          "required": true,
+          "type": "kotlin.String",
+          "default": "#202124",
           "values": null
         }
       ]
